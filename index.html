@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapty by Mihai Constantinescu</title>
+
+    <link rel="shortcut icon" type="image/png" href="src/img/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/sass/main.scss" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <script defer src="src/js/controller.js"></script>
+  </head>
+
+  <body>
+    <div class="overlay hidden"></div>
+    <div class="error-window hidden">
+      <h2 class="error__heading">⚠️ Error ⚠️</h2>
+
+      <p class="error__text"></p>
+      <button class="error__btn--close">❌</button>
+    </div>
+    <aside class="side-bar">
+      <img src="src/img/logo.png" alt="logo" class="logo" />
+
+      <ul class="workouts">
+        <form class="form hidden">
+          <div class="form__row">
+            <label class="form__label" for="type">Type</label>
+            <select name="type" class="form__input form__input--type">
+              <option value="running">Running</option>
+              <option value="cycling">Cycling</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="distance">Distance</label>
+            <input
+              type="text"
+              class="form__input form__input--distance"
+              placeholder="km"
+            />
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="duration">Duration</label>
+            <input
+              type="text"
+              class="form__input form__input--duration"
+              placeholder="min"
+            />
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="cadance">Cadance</label>
+            <input
+              type="text"
+              class="form__input form__input--cadence"
+              placeholder="step/min"
+            />
+          </div>
+
+          <div class="form__row form__row--hidden">
+            <label class="form__label" for="elevation gain">Elev gain</label>
+            <input
+              type="text"
+              class="form__input form__input--elevation"
+              placeholder="meters"
+            />
+          </div>
+          <button class="form__btn">OK</button>
+        </form>
+      </ul>
+
+      <p class="copyright">
+        &copy; Copyright by <span>Jonas Schmethmann</span> Use for learning or
+        your portfollio Don't use to teach Don't claim as your own.
+      </p>
+    </aside>
+
+    <main id="map" class="map"></main>
+  </body>
+</html>
