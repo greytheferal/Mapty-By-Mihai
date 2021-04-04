@@ -4,6 +4,10 @@
 
 Take a look this project with the features down below.
 
+## Summary - this project will help you monitor your workout and provide additional data such as the date and the weather at that time
+
+
+
 ## What I did in this project
 
 - **Rebuild** project with **MVC pattern** and **Scss**
